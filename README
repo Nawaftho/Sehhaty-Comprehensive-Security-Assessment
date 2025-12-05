@@ -1,0 +1,83 @@
+README – CPIT-455 Security Project
+
+Title: Comprehensive Security Assessment of Sehhaty
+Course: CPIT-455
+Student: Nawaf Abdullah Al-Thobaiti
+Section: IT1
+Submitted to: Prof. Adeeb Noor
+
+Project Description
+
+This Java proof-of-concept demonstrates core cybersecurity controls for the national Sehhaty healthcare platform. It accompanies the written security assessment submitted for CPIT-455.
+The code simulates authentication, access control, encryption of sensitive fields, secure logging, and safe exception handling.
+
+This is not real production code. It exists only to illustrate required security principles in a simplified environment.
+
+Features Demonstrated
+
+• Login validation and password hashing
+• Role-Based Access Control (RBAC)
+• Field-level encryption of medical data
+• Audit logging for data access accountability
+• Input validation and secure error handling
+
+Code Structure
+
+SehhatySecurityDemo – Main execution and demonstration scenario
+
+AuthService – User authentication and verification
+
+PasswordHasher – Demonstration hashing logic
+
+HealthRecordService – Permission checking for record access
+
+CryptoService – Placeholder encryption for sensitive health fields
+
+InMemory stores – Temporary data storage for users/records
+
+AuditService – Logging of sensitive operations
+
+GlobalExceptionHandler – Centralized exception management
+
+How to Run
+
+Requirements:
+Java JDK 8 or later
+
+Commands:
+
+javac SehhatySecurityDemo.java
+java SehhatySecurityDemo
+
+
+Expected behavior:
+• Patient login and ability to view own medical record
+• Patient blocked from viewing another patient’s record
+• Doctor allowed to access patient records
+• Audit logs generated for every authorized record access
+
+Security Notes and Academic Focus
+
+The implementation is simplified for demonstration:
+
+Base64 is used instead of strong encryption (AES-GCM)
+
+Password hashing is not suitable for production (BCrypt/Argon2 needed)
+
+Tokens are not signed or validated
+
+Doctor-patient mapping rules not enforced
+
+These decisions intentionally highlight concepts from the written security report.
+
+Academic Attribution
+
+Submitted as part of:
+Comprehensive Security Assessment of Sehhaty – CPIT-455
+Faculty of Computing and Information Technology
+King Abdulaziz University
+Instructor: Prof. Adeeb Noor
+
+Prepared by:
+Nawaf Abdullah Al-Thobaiti
+Section IT1
